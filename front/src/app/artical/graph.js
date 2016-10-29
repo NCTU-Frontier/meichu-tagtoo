@@ -32,3 +32,9 @@ $(function () {
 });
 
 window.alert("hi");
+
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+});
