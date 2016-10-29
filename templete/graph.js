@@ -7,12 +7,12 @@ $(function () {
                 enabled: true,
                 alpha: 15,
                 beta: 15,
-                depth: 500
+                depth: 700
             }
         },
         plotOptions: {
             column: {
-                depth: 40,
+                depth: 60,
                 stacking: true,
                 grouping: false,
                 groupZPadding: 100
@@ -23,10 +23,13 @@ $(function () {
             stack: 0
         }, {
             data: [5, 6, 3, 4, 1, 2],
-            stack: 0
+            stack: 1
         }, {
             data: [7, 9, 8, 7, 5, 8],
-            stack: 1
+            stack: 2
+        }, {
+            data: [7, 9, 8, 7, 5, 8],
+            stack: 3
         }]
     });
 });
