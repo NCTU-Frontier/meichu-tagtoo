@@ -87,3 +87,8 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Cus
+*.css
+*.css.map
+.idea
