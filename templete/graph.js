@@ -7,7 +7,7 @@ $(function () {
                 enabled: true,
                 alpha: 15,
                 beta: 15,
-                depth: 110
+                depth: 500
             }
         },
         plotOptions: {
@@ -15,7 +15,7 @@ $(function () {
                 depth: 40,
                 stacking: true,
                 grouping: false,
-                groupZPadding: 10
+                groupZPadding: 100
             }
         },
         series: [{
