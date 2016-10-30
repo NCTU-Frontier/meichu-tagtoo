@@ -13,6 +13,7 @@ import { BuyingEPComponent } from './article/charts/buying-ep.component';
 
 import { HttpService } from './http/http.service';
 import { CategoryComponent } from './article/charts/category.component';
+import { TableComponent } from './article/table/table.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CategoryComponent } from './article/charts/category.component';
     ArticleComponent,
     HttpComponent,
     BuyingEPComponent,
-    CategoryComponent
+    CategoryComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
