@@ -34,13 +34,7 @@ export class BuyingEPComponent implements OnInit {
       );
     console.log(this.items);
     console.log(this.test);
-    //tt : number[] = this.items;
-
-  }
-
-  options: Object;
-
-  ngOnInit() {
+    console.log(this.items.length);
     this.options = {
       title : { text : 'buying EP' },
       chart : {
@@ -51,11 +45,6 @@ export class BuyingEPComponent implements OnInit {
           alpha: 15,
           beta: 15,
           depth: 70
-        }
-      },
-      yAxis:{
-        title:{
-          text:"try try tese"
         }
       },
       plotOptions: {
@@ -73,5 +62,9 @@ export class BuyingEPComponent implements OnInit {
       }]
     };
   }
+
+  options: Object;
+
+  ngOnInit() { }
 
 }
