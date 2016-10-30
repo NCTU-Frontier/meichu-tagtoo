@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../../http/http.service';
 import { HttpComponent } from '../../http/http.component';
 import { Highcharts } from 'angular2-highcharts';
 import {Http} from "@angular/http";
@@ -13,8 +14,33 @@ import {Http} from "@angular/http";
 })
 export class BuyingEPComponent implements OnInit {
 
-  constructor() {
+  items : number[] = [];
+  avers : number[] = [];
+  test : any[] = [5,2,3,4,2,1,6,3,6,3,78,342,5,23,12,45,34,763,345,2,12,11,32];
 
+  constructor(private httpService: HttpService) {
+    this.httpService.getData()
+      .subscribe(
+        data => {
+          const myArr: any[] = [];
+          for (let key in data) {
+            myArr.push(data[key]);
+          }
+          for(let i=0;i<24;i++) {
+            this.items.push(myArr[0][i][0]);
+            this.avers.push(myArr[0][i][1]);
+          }
+        }
+      );
+    console.log(this.items);
+    console.log(this.test);
+    //tt : number[] = this.items;
+
+  }
+
+  options: Object;
+
+  ngOnInit() {
     this.options = {
       title : { text : 'buying EP' },
       chart : {
@@ -37,14 +63,10 @@ export class BuyingEPComponent implements OnInit {
       },
       series: [{
         name: "Middle Point",
-        data: [1,2,3],
+        data: this.avers,
         stack: 0
       }]
     };
   }
-
-  options: Object;
-
-  ngOnInit() { }
 
 }
