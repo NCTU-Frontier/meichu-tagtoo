@@ -1,16 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpComponent } from '../../http/http.component';
+import { Highcharts } from 'angular2-highcharts';
+import {Http} from "@angular/http";
+//import * as Highcharts3d from 'highcharts-3d';
 
 @Component({
   selector: 'app-buying-ep',
   template: `
     <chart [options]="options"></chart>
   `,
-  styles: []
+  styles: ['chart { display: block; }']
 })
 export class BuyingEPComponent implements OnInit {
-  options: Object;
 
   constructor() {
+
     this.options = {
       title : { text : 'buying EP' },
       chart : {
@@ -20,7 +24,7 @@ export class BuyingEPComponent implements OnInit {
           enabled: true,
           alpha: 15,
           beta: 15,
-          depth: 700
+          depth: 70
         }
       },
       plotOptions: {
@@ -32,26 +36,15 @@ export class BuyingEPComponent implements OnInit {
         }
       },
       series: [{
-        name: "0~1",
-        data: [1, 2, 4, 3, 2, 4],
+        name: "Middle Point",
+        data: [1,2,3],
         stack: 0
-      }, {
-        name: "1~2",
-        data: [5, 6, 3, 4, 1, 2],
-        stack: 1
-      }, {
-        name: "2~3",
-        data: [7, 9, 8, 7, 5, 8],
-        stack: 2
-      }, {
-        name: "3~4",
-        data: [7, 9, 8, 7, 5, 8],
-        stack: 3
       }]
     };
   }
 
-  ngOnInit() {
-  }
+  options: Object;
+
+  ngOnInit() { }
 
 }

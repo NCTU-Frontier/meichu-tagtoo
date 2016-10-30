@@ -5,13 +5,14 @@ import { HttpModule } from '@angular/http';
 import { ChartModule } from 'angular2-highcharts';
 
 import { AppComponent } from './app.component';
-import { FooterComponent } from './footer.component';
-import { HeaderComponent } from './header.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 import { ArticleComponent } from './article/article.component';
-import { HttpComponent } from './http.component';
+import { HttpComponent } from './http/http.component';
 import { BuyingEPComponent } from './article/charts/buying-ep.component';
 
-import { HttpService } from './http.service';
+import { HttpService } from './http/http.service';
+import { CategoryComponent } from './article/charts/category.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpService } from './http.service';
     FooterComponent,
     ArticleComponent,
     HttpComponent,
-    BuyingEPComponent
+    BuyingEPComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
