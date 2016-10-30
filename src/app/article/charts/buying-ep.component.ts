@@ -53,6 +53,11 @@ export class BuyingEPComponent implements OnInit {
           depth: 70
         }
       },
+      yAxis:{
+        title:{
+          text:"try try tese"
+        }
+      },
       plotOptions: {
         column: {
           depth: 60,
